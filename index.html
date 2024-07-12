@@ -11,27 +11,34 @@
 
     <section id="etch-a-sketch">
         <div id="menu">
-            <div class="current_color"></div>
+            <input type="color" id="colorPicker"  class="current_color">
             <div class="options">
-                <button>Color Mode</button>
-                <button>Gay Mode</button>
-                <button>Eraser</button>
-                <button>Clear</button>
+                <button class="buttons" onclick="switchColorMode()">Color Mode</button>
+                <button class="buttons" onclick="switchRainbowMode()">Gay Mode</button>
+                <button class="buttons" onclick="switchEraserMode()">Eraser</button>
+                <button class="buttons" onclick="clearPanel()">Clear</button>
+                <button class="buttons" onclick="showGrid()">show grid</button>
+                <button class="buttons" onclick="hideGrid()">hide grid</button>
+
             </div>
-            <input type="range">
+            <div id="range">
+                <label id="size">16 x 16</label>
+                <input class="slider" type="range" id="myRange" min=0 max="32" step="8" value="16" oninput="updateRange(this.value)">
+            </div>
         </div>
         <div id="panel">
             <h3 id="panel_header">Etch-A-Sketch</h3>
-            <div id="pamel_squar">
-                
+            <div id="panel_squar">
             </div>
         </div>
     </section>
     
-    <p>Copyright copy &copy; 2024 <a
-        href="github.com/saadelk48" >elkadiri saad eddine <img src="#" alt="github logo">
-       </a>
-   </p>
+    <footer>
+        <p>Copyright copy &copy; 2024 <a style="text-decoration: none; color: black;"
+            href="https:\\github.com/saadelk48" >elkadiri saad eddine <img src="#" alt="github logo">
+        </a>
+         </p>
+   </footer>
 </body>
 <script src="script.js"></script>
 </html>

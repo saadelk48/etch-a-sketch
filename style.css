@@ -2,6 +2,7 @@
     font-family: montserrat;
     src: url(Montserrat/Montserrat-VariableFont_wght.ttf);
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -27,6 +28,9 @@
     width: 32rem;
     height: 32rem;
     border: black solid;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: content-box !important;
 }
 
 #panel_header{
@@ -52,7 +56,6 @@
 
 .current_color{
     border-radius: 50px;
-    background-color: black;
     width: 4rem;
     height: 4rem;
     border: none;
@@ -119,11 +122,15 @@ font-family: montserrat;
     cursor: pointer;
   } */
   
-  .slider::-moz-range-thumb {
-    
+.slider::-moz-range-thumb {
     width: 18px;
     height: 18px;
     border-radius: 50%;
     background: black;
     cursor: pointer;
-  }
+}
+
+.box{
+    border: 1px solid black;
+    user-select: none;
+}
